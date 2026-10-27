@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دعوة مكسار ميره</title>
+    <meta name="description" content="مكسار ميره">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:url" content="https://touch-invetation.github.io/wedding-project22/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="مكسار ميره" />
+    <meta property="og:image" content="https://touch-invetation.github.io/wedding-project22/invite.png" />
+    <meta property="og:image:secure_url" content="https://touch-invetation.github.io/wedding-project22/invite.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="512" />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary" />
+    <meta property="twitter:domain" content="touch-invetation.github.io" />
+    <meta property="twitter:url" content="https://touch-invetation.github.io/wedding-project22/" />
+    <meta name="twitter:title" content="مكسار ميره" />
+    <meta name="twitter:image" content="https://touch-invetation.github.io/wedding-project22/invite.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Tajawal:wght@400;500;700&family=Amiri:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- ملف التنسيق بعد البوتستراب عشان تنطبق قواعدنا -->
+    <!-- <link rel="stylesheet" href="style.css?v=18"> -->
+     <link rel="stylesheet" href="style (3).css?v=18">
+<script>
+    // يضبط ارتفاع الغلاف بحيث ينتهي كرت الغلاف عند آخر الشاشة بالضبط،
+    // فما يبين شي من بطاقة الدعوة تحته (يشتغل على الآيفون وواتساب والمتصفحات اللي ما بتفهم svh)
+    (function () {
+        var lastW = window.innerWidth;
+        function pageTop(el) {
+            var y = 0;
+            while (el) { y += el.offsetTop; el = el.offsetParent; }
+            return y;
+        }
+        function fitCover() {
+            var vh = window.innerHeight;
+            document.documentElement.style.setProperty('--app-h', vh + 'px');
+            var s = document.querySelector('.slide-1');
+            if (!s) return;
+            var card = s.closest('.contain.reveal') || s.parentElement;
+            s.style.height = '';                         // رجّعه للقيمة الافتراضية أول
+            var extra = card.offsetHeight - s.offsetHeight;   // حشوة الكرت حوالين الغلاف
+            var h = vh - pageTop(card) - extra;
+            s.style.height = Math.max(560, Math.round(h)) + 'px';
+        }
+        document.addEventListener('DOMContentLoaded', fitCover);
+        window.addEventListener('load', fitCover);
+        window.addEventListener('orientationchange', function () { setTimeout(fitCover, 300); });
+        window.addEventListener('resize', function () {
+            if (Math.abs(window.innerWidth - lastW) > 50) { lastW = window.innerWidth; fitCover(); }
+        });
+    })();
+</script>
+</head>
+
+<body class="no-scroll">
+
+    <!-- صفحة الترحيب الأوليّة -->
+    <div id="welcome-overlay" class="welcome-overlay curtain" onclick="enterInvitation()">
+        <!-- <div class="curtain-rod"></div> -->
+        <div class="curtain-panel left"><i style="--j:0;--dl:0.40s;z-index:1"></i><i style="--j:1;--dl:0.32s;z-index:2"></i><i style="--j:2;--dl:0.24s;z-index:3"></i><i style="--j:3;--dl:0.16s;z-index:4"></i><i style="--j:4;--dl:0.08s;z-index:5"></i><i style="--j:5;--dl:0.00s;z-index:6"></i></div>
+        <div class="curtain-panel right"><i style="--j:0;--dl:0.40s;z-index:1"></i><i style="--j:1;--dl:0.32s;z-index:2"></i><i style="--j:2;--dl:0.24s;z-index:3"></i><i style="--j:3;--dl:0.16s;z-index:4"></i><i style="--j:4;--dl:0.08s;z-index:5"></i><i style="--j:5;--dl:0.00s;z-index:6"></i></div>
+        <div class="curtain-label">
+            <h2 class="curtain-title">مكسار ميره</h2>
+            <div class="ornament"><i></i></div>
+            <!-- <p class="curtain-families">ميره</p> -->
+            <p class="curtain-hint">اضغط هنا</p>
+        </div>
+    </div>
+
+    <div class="wedding">
+        <!-- Slide 1: الغلاف (نفس التصميم المرجعي، وكل عنصر بيترسم لحاله لما تنفتح الستارة) -->
+        <div class="contain reveal cover-card">
+            <div class="slide-1">
+                <span class="cover-flora l" aria-hidden="true"></span>
+                <span class="cover-flora r" aria-hidden="true"></span>
+                <span class="cover-line"></span>
+                <div class="cover-hearts" aria-hidden="true"><svg viewBox="0 0 100 90" xmlns="http://www.w3.org/2000/svg"><path d="M50,85 C20,60 5,45 5,30 C5,15 17,5 32,5 C42,5 50,15 50,15 C50,15 58,5 68,5 C83,5 95,15 95,30 C95,45 80,60 50,85 Z" fill="currentColor"/></svg><svg viewBox="0 0 100 90" xmlns="http://www.w3.org/2000/svg"><path d="M50,85 C20,60 5,45 5,30 C5,15 17,5 32,5 C42,5 50,15 50,15 C50,15 58,5 68,5 C83,5 95,15 95,30 C95,45 80,60 50,85 Z" fill="currentColor"/></svg><svg viewBox="0 0 100 90" xmlns="http://www.w3.org/2000/svg"><path d="M50,85 C20,60 5,45 5,30 C5,15 17,5 32,5 C42,5 50,15 50,15 C50,15 58,5 68,5 C83,5 95,15 95,30 C95,45 80,60 50,85 Z" fill="currentColor"/></svg><svg viewBox="0 0 100 90" xmlns="http://www.w3.org/2000/svg"><path d="M50,85 C20,60 5,45 5,30 C5,15 17,5 32,5 C42,5 50,15 50,15 C50,15 58,5 68,5 C83,5 95,15 95,30 C95,45 80,60 50,85 Z" fill="currentColor"/></svg></div>
+                <div class="cover-date" dir="ltr"><span>30</span><span>10</span><span>26</span></div>
+                <h1 class="cover-title" aria-label="مكسار ميره"><span class="t1">مكسار</span><span class="t2">ميره</span></h1>
+                <img class="cover-product" src="./mira-store.webp" alt="">
+            </div>
+        </div>
+
+        <!-- Slide 2: بطاقة الدعوة -->
+        <div class="slide-2 reveal">
+            <div class="invite-card">
+                <div class="poem-heart" aria-hidden="true"><i></i><svg viewBox="0 0 100 90" xmlns="http://www.w3.org/2000/svg"><path d="M50,85 C20,60 5,45 5,30 C5,15 17,5 32,5 C42,5 50,15 50,15 C50,15 58,5 68,5 C83,5 95,15 95,30 C95,45 80,60 50,85 Z" fill="currentColor"/></svg><i></i></div>
+                <div class="poem">
+                    <p class="bayt"><span>يا مرحبا عدّ السحايب لا هلّت</span><span>ترحيبةٍ تليق بأهل المقام</span></p>
+                    <p class="bayt"><span>ليلة فرحنا بشوفتكم تجلّت</span><span>وزادها تشريفكم عزّ ووسام</span></p>
+                </div>
+                <!-- <div class="ornament"><i></i></div> -->
+<p class="small-label">يسعدني ويشرفني <br> دعوتكم لحضور مكسار ابنتي</p>
+                <div class="couple-names couple-main">
+                   <span>ميره</span>
+                </div>
+                <div class="ornament"><i></i></div>
+                <!-- <div class="info">
+                    <p><span>الجمعة</span><b>|</b><span>30 أكتوبر 2026</span></p>
+                    <p><span>الساعة</span><b>|</b><span>7:00 مساءً</span></p>
+                    <p><span>المكان</span><b>|</b><span>قاعة البرستيج - الخليبية</span></p>
+                </div> -->
+                <p class="closing">بحضوركم تكتمل أفراحنا <i class="bi bi-heart-fill heart-ico"></i></p>
+            <div class="couple-names couple-sub">
+                    <span></span><span>ام ميره</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: تنويه -->
+        <div class="slide-20">
+            <div class="contain reveal flora flora-notice">
+                <p class="notice-title">تنويه | جنّة الأطفال منازلهم <i class="bi bi-heart-fill heart-ico"></i></p>
+                <img class="notice-kids" src="./no-kids.png" alt="">
+                <div class="ornament"><i></i></div>
+                <p class="notice-text">
+                    فرحتنا بكم تحلى، وبراحتكم تكمل ليالينا،<br>
+                    والأطفال جنّتهم دارهم، ولكم زينة أفراحنا.<br>
+                    نرجو عدم اصطحاب الأطفال منعاً للإحراج، علماً بوجود طاقم مختص عند المدخل لتنظيم الدخول.
+                </p>
+            </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="slide-4">
+            <div class="contain reveal flora flora-date">
+                <p class="section-title">موعد المكسار</p>
+                <p>الجمعة - الثلاثين من أكتوبر</p>
+                <div class="ornament"><i></i></div>
+                <div class="calendar-widget" lang="en" dir="ltr">
+                    <div class="calendar-header">
+                        <h2 class="calendar-month">October</h2>
+                        <span class="calendar-year">2026</span>
+                    </div>
+
+                    <div class="calendar-grid">
+                        <!-- أيام الأسبوع (7 أيام) -->
+                        <div class="day-name">Su</div>
+                        <div class="day-name">Mo</div>
+                        <div class="day-name">Tu</div>
+                        <div class="day-name">We</div>
+                        <div class="day-name">Th</div>
+                        <div class="day-name">Fr</div>
+                        <div class="day-name">Sa</div>
+
+                        <!-- أكتوبر 2026: يوم 1 يوافق الخميس، والشهر 31 يوماً، والجمعة 30 هو يوم المناسبة -->
+                        <div class="calendar-day"></div>
+                        <div class="calendar-day"></div>
+                        <div class="calendar-day"></div>
+                        <div class="calendar-day"></div>
+                        <div class="calendar-day">1</div>
+                        <div class="calendar-day">2</div>
+                        <div class="calendar-day">3</div>
+                        <div class="calendar-day">4</div>
+                        <div class="calendar-day">5</div>
+                        <div class="calendar-day">6</div>
+                        <div class="calendar-day">7</div>
+                        <div class="calendar-day">8</div>
+                        <div class="calendar-day">9</div>
+                        <div class="calendar-day">10</div>
+                        <div class="calendar-day">11</div>
+                        <div class="calendar-day">12</div>
+                        <div class="calendar-day">13</div>
+                        <div class="calendar-day">14</div>
+                        <div class="calendar-day">15</div>
+                        <div class="calendar-day">16</div>
+                        <div class="calendar-day">17</div>
+                        <div class="calendar-day">18</div>
+                        <div class="calendar-day">19</div>
+                        <div class="calendar-day">20</div>
+                        <div class="calendar-day">21</div>
+                        <div class="calendar-day">22</div>
+                        <div class="calendar-day">23</div>
+                        <div class="calendar-day">24</div>
+                        <div class="calendar-day">25</div>
+                        <div class="calendar-day">26</div>
+                        <div class="calendar-day">27</div>
+                        <div class="calendar-day">28</div>
+                        <div class="calendar-day">29</div>
+                        <div class="calendar-day special-heart">
+                            30
+                            <svg class="heart-svg" viewBox="0 0 100 100">
+                                <path
+                                    d="M50,85 C20,60 5,45 5,30 C5,15 17,5 32,5 C42,5 50,15 50,15 C50,15 58,5 68,5 C83,5 95,15 95,30 C95,45 80,60 50,85 Z"
+                                    fill="none" stroke="currentColor" stroke-width="2.5" />
+                            </svg>
+                        </div>
+                        <div class="calendar-day">31</div>
+                    </div>
+                </div>
+
+                <!-- أزرار الإضافات الجديدة (التقويم وتأكيد الحضور) -->
+                <div class="extra-actions">
+                    <button class="action-btn" onclick="addToCalendar()">
+                        <i class="bi bi-calendar-plus"></i> احفظ الموعد
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="slide-4 slide-countdown">
+            <div class="contain reveal">
+                <div class="countdown-container">
+                    <h3>العدّ التنازلي للمكسار</h3>
+                    <div class="countdown-timer">
+                        <div class="time-box"><span id="days">00</span><span class="label">أيام</span></div>
+                        <div class="time-box"><span id="hours">00</span><span class="label">ساعات</span></div>
+                        <div class="time-box"><span id="minutes">00</span><span class="label">دقائق</span></div>
+                        <div class="time-box"><span id="seconds">00</span><span class="label">ثواني</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+<div class="slide-3">
+    <div class="contain reveal flora flora-place">
+        <p class="section-title">الموقع</p>
+        <div class="ornament"><i></i></div>
+        <p class="venue-name">منزل اهل العروس</p>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3600.206717110719!2d56.20130828498378!3d25.531490283741753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjXCsDMxJzUzLjQiTiA1NsKwMTEnNTYuOCJF!5e0!3m2!1sar!2sjo!4v1793129185203!5m2!1sar!2sjo"
+            width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        <div class="extra-actions">
+            <a class="action-btn" target="_blank" rel="noopener"
+                href="https://www.google.com/maps/search/?api=1&query=25.5314903,56.2013083">
+                <i class="bi bi-geo-alt"></i> افتح في الخرائط
+            </a>
+        </div>
+    </div>
+</div>
+
+
+        <!-- Slide 5 -->
+        <div class="slide-5">
+            <div class="contain reveal flora flora-program">
+                <!-- <h3 class="timeline-title">برنامج الحفل</h3> -->
+                <div class="program-card">
+                    <div class="program-icon"><i class="bi bi-people"></i></div>
+                    <div class="ornament"><i></i></div>
+                    <p class="program-title">استقبال الضيوف</p>
+                    <p class="program-time">يبدأ الساعة 3:30 مساءً</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6 -->
+        <div class="slide-6">
+            <div class="contain reveal flora flora-wishes">
+                <div class="wishes-container">
+                    <h3 class="wishes-title">كلمة لميره</h3>
+                    <div class="ornament"><i></i></div>
+                    <p class="wishes-subtitle">شاركنا بأمنية أو رسالة مباركة</p>
+                    <form class="wishes-form" id="msgForm">
+                        <div class="form-group"><input type="text" id="guestName" placeholder="اسم الضيف الكريم"
+                                required></div>
+                        <div class="form-group"><textarea id="guestText" placeholder="اكتب مباركتك أو أمنيتك هنا..."
+                                rows="4" required></textarea></div>
+                        <button type="submit" class="submit-btn" id="submitBtn">إرسال الأمنية</button>
+                        <!-- <button type="button" class="action-btn" data-bs-toggle="modal" data-bs-target="#rsvpModal">
+                            <i class="bi bi-check2-circle"></i> تأكيد الحضور (RSVP)
+                        </button> -->
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 8 -->
+        <div class="slide-8" id="wishesSection" style="display: none;">
+            <div class="contain reveal">
+                <div class="attendance-counter text-center mb-3">
+                    <span>تهنئات الحاضرين :</span>
+                    <!-- <strong id="totalAttendeesCount">0</strong> -->
+                </div>
+                <div class="wishes-container">
+                    <div id="wishesList" class="wishes-list"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 7: الختام -->
+        <div class="slide-7">
+            <div class="contain reveal flora flora-final">
+                <div class="ornament"><i></i></div>
+                <p class="final-names">مكسار ميره</p>
+                <p class="final-date" dir="ltr">30 . 10 . 2026</p>
+                <i class="bi bi-heart-fill heart-ico"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- زر الموسيقى مع موجات الصوت المتحركة -->
+    <button id="musicToggleBtn" class="music-toggle-btn" onclick="toggleMusic()" aria-label="تحكم بالموسيقى">
+        <div id="musicEqualizer" class="equalizer paused-eq">
+            <span></span><span></span><span></span>
+        </div>
+        <i id="musicIcon" class="bi bi-volume-mute-fill"></i>
+    </button>
+
+    <!-- الموسيقى: ملف mp3 بنفس مجلد الموقع (لازم اسمه music.mp3) -->
+    <audio id="bgMusic" src="music.mp3" loop preload="auto" playsinline muted></audio>
+
+    <!-- نافذة تأكيد الحضور (RSVP Modal) -->
+    <div class="modal fade" id="rsvpModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-dark p-3" style="border-radius: 15px;">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title w-100 text-center fw-bold">تأكيد الحضور</h5>
+                    <button type="button" class="btn-close m-0" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="rsvpForm" onsubmit="submitRSVP(event)">
+                        <div class="mb-3 text-end">
+                            <label class="form-label">الاسم الكريم:</label>
+                            <input type="text" id="rsvpName" class="form-control text-end"
+                                placeholder="أدخل اسمك الكامل" required>
+                        </div>
+
+                        <!-- حالة الحضور -->
+                        <div class="mb-3 text-end">
+                            <label class="form-label d-block">الحالة:</label>
+                            <div class="form-check form-check-inline me-3">
+                                <input class="form-check-input" type="radio" name="rsvpStatus" id="statusAttend"
+                                    value="حاضر" checked onchange="toggleGuestCount(true)">
+                                <label class="form-check-label" for="statusAttend">سأحضر بإذن الله</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="rsvpStatus" id="statusApology"
+                                    value="اعتذار" onchange="toggleGuestCount(false)">
+                                <label class="form-check-label" for="statusApology">أعتذر عن الحضور</label>
+                            </div>
+                        </div>
+
+                        <!-- عدد الأشخاص -->
+                        <div class="mb-3 text-end" id="rsvpCountGroup">
+                            <label class="form-label">عدد الأشخاص الحاضرين:</label>
+                            <select id="rsvpCount" class="form-select text-end">
+                                <option value="1">شخص واحد</option>
+                                <option value="2">شخصان</option>
+                                <option value="3">ثلاثة أشخاص</option>
+                                <option value="4">أربعة أشخاص</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" id="rsvpSubmitBtn" class="btn btn-primary w-100"
+                            style="background-color: var(--primary-color); border: none;">إرسال التأكيد</button>
+                    </form>
+
+                    <div id="rsvpSuccess" class="alert alert-success mt-3 text-center d-none" role="alert">
+                        شكراً لك! تم تسجيل ردك بنجاح.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+<!-- Firebase SDKs -->
+<script>
+    let isMusicPlaying = false;
+
+
+    // دالة الدخول الشاملة
+    function enterInvitation() {
+        const welcomeOverlay = document.getElementById('welcome-overlay');
+        if (welcomeOverlay && !welcomeOverlay.classList.contains('open')) {
+            welcomeOverlay.classList.add('open');
+            document.body.classList.remove('no-scroll');
+            document.body.classList.add('opened');                                  // يبدأ رسم الغلاف
+            setTimeout(() => document.body.classList.add('drawn'), 12500);          // احتياط: يظهر كل شي كامل
+
+            setTimeout(() => {
+                welcomeOverlay.style.display = 'none';
+            }, 2400);
+
+            const video = document.querySelector('.slide-1 video');
+            if (video) {
+                video.play().catch(err => console.log(err));
+            }
+
+            playYouTubeAudio();
+            startHeartRain();
+        }
+
+        // نستنى لين يخلص رسم الغلاف قبل ما يبدأ التمرير التلقائي
+        setTimeout(() => {
+            startAutoScroll();
+        }, 9500);
+    }
+
+    // تشغيل وإيقاف الموسيقى مع تحديث الموجات الصوتية
+    const bgMusic = document.getElementById('bgMusic');
+    let userPaused = false;
+
+    function syncMusicUI(playing) {
+        const icon = document.getElementById('musicIcon');
+        const eq = document.getElementById('musicEqualizer');
+        isMusicPlaying = playing;
+        if (icon) icon.className = playing ? 'bi bi-music-note-beamed' : 'bi bi-volume-mute-fill';
+        if (eq) eq.classList.toggle('paused-eq', !playing);
+    }
+
+    function playYouTubeAudio() {            // الاسم القديم محفوظ عشان باقي الكود يشتغل
+        if (!bgMusic) return;
+        userPaused = false;
+        bgMusic.muted = false;
+        bgMusic.volume = 1;
+        const pr = bgMusic.play();
+        if (pr && pr.then) {
+            pr.then(() => syncMusicUI(true)).catch(() => syncMusicUI(false));
+        } else {
+            syncMusicUI(true);
+        }
+    }
+
+    function pauseYouTubeAudio() {
+        if (!bgMusic) return;
+        userPaused = true;
+        bgMusic.pause();
+        syncMusicUI(false);
+    }
+
+    // أول ما تنفتح الصفحة: نجرّب تشغيل (صامت). المتصفح بيسمح بالصامت غالباً.
+    document.addEventListener('DOMContentLoaded', function () {
+        if (bgMusic) { const p = bgMusic.play(); if (p && p.catch) p.catch(() => {}); }
+    });
+
+    // أول ضغطة حقيقية بأي مكان: نفتح الصوت. بنعيد المحاولة لين يشتغل فعلاً.
+    (function () {
+        function unlock(e) {
+            if (userPaused || !bgMusic) return;
+            if (e && e.target && e.target.closest && e.target.closest('#musicToggleBtn')) return;
+            if (!bgMusic.paused && !bgMusic.muted) return;   // شغّال وبصوت
+            playYouTubeAudio();
+        }
+        ['click', 'touchend'].forEach(n => window.addEventListener(n, unlock, { capture: true, passive: true }));
+    })();
+
+    function toggleMusic() {
+        if (isMusicPlaying) {
+            pauseYouTubeAudio();
+        } else {
+            playYouTubeAudio();
+        }
+    }
+
+    // تأثير القلوب المتساقطة
+    function startHeartRain() {
+        const container = document.getElementById('hearts-container');
+        if (!container) return; // حاوية القلوب معطّلة
+        setInterval(() => {
+            const heart = document.createElement('div');
+            heart.classList.add('falling-heart');
+            heart.innerHTML = '𔓘';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = (Math.random() * 3 + 3) + 's';
+            heart.style.fontSize = (Math.random() * 15 + 12) + 'px';
+            container.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 6000);
+        }, 400);
+    }
+
+    // الظهور التدريجي للعناصر أثناء التمرير (Scroll Reveal)
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // زر إضافة الموعد للتقويم
+    function addToCalendar() {
+        const title = "مكسار ميره";
+        const details = "مكسار ميره";
+        const location = "منزل اهل العروس";
+        const startTime = "20261030T150000Z";
+        const endTime = "20261030T210000Z";
+
+        const googleUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(title)}&details=${encodeURIComponent(details)}&location=${encodeURIComponent(location)}&dates=${startTime}/${endTime}`;
+        window.open(googleUrl, '_blank');
+    }
+
+    // تأكيد الحضور (RSVP)
+    function submitRSVP(e) {
+        e.preventDefault();
+        document.getElementById('rsvpForm').style.display = 'none';
+        document.getElementById('rsvpSuccess').classList.remove('d-none');
+    }
+
+    // عداد الوقت التنازلي
+    const targetDate = new Date("2026-10-30T19:00:00+04:00").getTime();
+    const countdown = setInterval(function () {
+        const now = new Date().getTime();
+        const distance = Math.max(0, targetDate - now);
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        if (document.getElementById("days")) {
+            document.getElementById("days").innerText = days < 10 ? "0" + days : days;
+            document.getElementById("hours").innerText = hours < 10 ? "0" + hours : hours;
+            document.getElementById("minutes").innerText = minutes < 10 ? "0" + minutes : minutes;
+            document.getElementById("seconds").innerText = seconds < 10 ? "0" + seconds : seconds;
+        }
+
+        if (distance <= 0) {
+            clearInterval(countdown);
+        }
+    }, 1000);
+
+    // التمرير التلقائي السلس مع الإيقاف الذكي عند تدخل المستخدم
+    let animationFrameId = null;
+    let isAutoScrolling = false;
+    const scrollSpeedPxPerSec = 100;   // سرعة التمرير (بكسل بالثانية) — ثابتة على كل الأجهزة
+    let scrollPos = 0, lastTs = 0;
+
+    function pageBottom() {
+        return Math.max(document.documentElement.scrollHeight, document.body.scrollHeight) - window.innerHeight;
+    }
+
+    function step(ts) {
+        if (!isAutoScrolling) return;
+        if (!lastTs) lastTs = ts;
+        const dt = Math.min(ts - lastTs, 100);   // نتجاهل القفزات لو الصفحة تجمّدت لحظة
+        lastTs = ts;
+
+        scrollPos += scrollSpeedPxPerSec * dt / 1000;
+        window.scrollTo(0, Math.round(scrollPos));
+
+        if (scrollPos >= pageBottom() - 2) {
+            stopAutoScroll();
+            return;
+        }
+        animationFrameId = requestAnimationFrame(step);
+    }
+
+    var startAutoScroll = function () {
+        if (isAutoScrolling) return;
+        isAutoScrolling = true;
+        // scroll-behavior:smooth بالـ CSS بيخلّي سفاري يعيد الحركة كل إطار فما بيتحرك؛ نوقفه أثناء التمرير التلقائي
+        document.documentElement.style.scrollBehavior = 'auto';
+        scrollPos = window.scrollY;
+        lastTs = 0;
+        animationFrameId = requestAnimationFrame(step);
+    };
+
+    function stopAutoScroll() {
+        if (isAutoScrolling) {
+            isAutoScrolling = false;
+            cancelAnimationFrame(animationFrameId);
+            document.documentElement.style.scrollBehavior = '';
+        }
+    }
+
+    // لو الضيف تدخّل (لمس/سحب/عجلة/كيبورد) بنوقف التمرير، ولو هدي وبطّل يتحرك كم ثانية بنكمل لحالنا
+    const RESUME_AFTER_MS = 1500;
+    let autoScrollWanted = false;     // بيصير true أول ما يبدأ التمرير التلقائي
+    let resumeTimer = null;
+    let touching = false;
+
+    const _startAuto = startAutoScroll;
+    startAutoScroll = function () { autoScrollWanted = true; _startAuto(); };
+
+    function canResume() {
+        if (!autoScrollWanted || isAutoScrolling || touching) return false;
+        if (document.body.classList.contains('modal-open')) return false;          // نافذة تأكيد الحضور مفتوحة
+        const ae = document.activeElement;
+        if (ae && /^(INPUT|TEXTAREA|SELECT)$/.test(ae.tagName)) return false;      // الضيف عم يكتب
+        if (window.scrollY >= pageBottom() - 2) return false;                      // وصلنا لآخر الصفحة
+        return true;
+    }
+
+    function userInteracted() {
+        stopAutoScroll();
+        clearTimeout(resumeTimer);
+        resumeTimer = setTimeout(function tryResume() {
+            if (canResume()) _startAuto();
+            else if (autoScrollWanted && !isAutoScrolling && window.scrollY < pageBottom() - 2) {
+                resumeTimer = setTimeout(tryResume, 1000);                          // لسا مشغول، نعيد الفحص
+            }
+        }, RESUME_AFTER_MS);
+    }
+
+    window.addEventListener('wheel', userInteracted, { passive: true });
+    window.addEventListener('touchstart', () => { touching = true; userInteracted(); }, { passive: true });
+    window.addEventListener('touchmove', userInteracted, { passive: true });
+    window.addEventListener('touchend', () => { touching = false; userInteracted(); }, { passive: true });
+    window.addEventListener('touchcancel', () => { touching = false; userInteracted(); }, { passive: true });
+    // حركة الدفع بعد السحب (momentum) على الآيفون ما فيها أحداث لمس، بس فيها scroll
+    window.addEventListener('scroll', function () {
+        if (!isAutoScrolling && autoScrollWanted) userInteracted();
+    }, { passive: true });
+    window.addEventListener('keydown', (e) => {
+        if (['ArrowDown', 'ArrowUp', 'Space', 'PageDown', 'PageUp'].includes(e.code)) {
+            userInteracted();
+        }
+    });
+</script>
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
+    import { getFirestore, collection, addDoc, serverTimestamp, query, orderBy, onSnapshot } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore.js";
+
+    // 1. إعدادات Firebase
+    const firebaseConfig = {
+        apiKey: "AIzaSyBxzEKOQ8NrNqgeJp1XePLEsbEKXdXHla4",
+        authDomain: "my-wedding-cards.firebaseapp.com",
+        projectId: "my-wedding-cards",
+        storageBucket: "my-wedding-cards.firebasestorage.app",
+        messagingSenderId: "844853477189",
+        appId: "1:844853477189:web:0866c7b5e13b877e20482c"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    // 2. مراجع المجموعات في Firestore
+    const wishesRef = collection(db, "wishes_mira");
+    // const rsvpRef = collection(db, "rsvp_abdullah_mira"); // تم إضافة مرجع تأكيد الحضور
+
+    const msgForm = document.getElementById('msgForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const wishesList = document.getElementById('wishesList');
+
+    // 3. قراءة التهنئات واستعراضها لحظياً (Realtime)
+    if (wishesList) {
+        const q = query(wishesRef, orderBy("createdAt", "desc"));
+        onSnapshot(q, (snapshot) => {
+            wishesList.innerHTML = '';
+            // إخفاء القسم كاملاً (مع عدد الحاضرين) إذا ما في تهاني
+            const section = document.getElementById('wishesSection');
+            if (section) section.style.display = snapshot.empty ? 'none' : '';
+            snapshot.forEach((doc) => {
+                const data = doc.data();
+                const card = document.createElement('div');
+                card.className = 'wish-card';
+                card.innerHTML = `
+                    <div class="wish-name">${escapeHtml(data.name)}</div>
+                    <div class="wish-text">${escapeHtml(data.message)}</div>
+                `;
+                wishesList.appendChild(card);
+            });
+        });
+    }
+
+    // 4. حفظ التهنئة الجديدة عند الضغط على إرسال
+    if (msgForm) {
+        msgForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const name = document.getElementById('guestName').value.trim();
+            const message = document.getElementById('guestText').value.trim();
+
+            if (!name || !message) return;
+
+            try {
+                submitBtn.disabled = true;
+                submitBtn.innerText = 'جاري الإرسال...';
+
+                await addDoc(wishesRef, {
+                    name: name,
+                    message: message,
+                    createdAt: serverTimestamp()
+                });
+
+                alert('شكراً لك! تم إرسال تهنئتك بنجاح.');
+                msgForm.reset();
+            } catch (error) {
+                console.error("خطأ أثناء الإرسال: ", error);
+                alert('حدث خطأ أثناء الإرسال. تأكدي من إعدادات القواعد (Rules).');
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerText = 'إرسال الأمنية';
+            }
+        });
+    }
+
+    // 5. دالة التحكم بإظهار/إخفاء عدد الحاضرين في المودال
+    window.toggleGuestCount = function (isAttending) {
+        const countGroup = document.getElementById('rsvpCountGroup');
+        if (countGroup) {
+            if (isAttending) {
+                countGroup.classList.remove('d-none');
+            } else {
+                countGroup.classList.add('d-none');
+            }
+        }
+    };
+
+    // الاستماع لبيانات تأكيد الحضور وحساب إجمالي الحاضرين لحظياً
+    const totalAttendeesElement = document.getElementById('totalAttendeesCount');
+
+    if (totalAttendeesElement) {
+        onSnapshot(rsvpRef, (snapshot) => {
+            let totalCount = 0;
+
+            snapshot.forEach((doc) => {
+                const data = doc.data();
+                // حساب الأشخاص الذين اختاروا "حاضر" فقط
+                if (data.status === 'حاضر') {
+                    totalCount += (data.guestsCount || 1);
+                }
+            });
+
+            // عرض النتيجة في الصفحة
+            totalAttendeesElement.innerText = totalCount;
+        });
+    }
+
+    // 6. دالة إرسال تأكيد الحضور (RSVP)
+    window.submitRSVP = async function (e) {
+        e.preventDefault();
+
+        const name = document.getElementById('rsvpName').value.trim();
+        const statusElement = document.querySelector('input[name="rsvpStatus"]:checked');
+        const status = statusElement ? statusElement.value : 'حاضر';
+        const count = status === 'حاضر' ? parseInt(document.getElementById('rsvpCount').value) : 0;
+
+        const rsvpSubmitBtn = document.getElementById('rsvpSubmitBtn');
+        const successAlert = document.getElementById('rsvpSuccess');
+        const form = document.getElementById('rsvpForm');
+
+        if (!name) return;
+
+        try {
+            rsvpSubmitBtn.disabled = true;
+            rsvpSubmitBtn.innerText = 'جاري الإرسال...';
+
+            // رفع البيانات إلى Firebase Firestore
+            await addDoc(rsvpRef, {
+                name: name,
+                status: status,
+                guestsCount: count,
+                createdAt: serverTimestamp()
+            });
+
+            // إظهار رسالة النجاح
+            form.classList.add('d-none');
+            successAlert.classList.remove('d-none');
+
+            // إعادة تهيئة المودال وإغلاقه تلقائياً بعد 3 ثواني
+            setTimeout(() => {
+                const modalElement = document.getElementById('rsvpModal');
+                if (window.bootstrap && bootstrap.Modal) {
+                    const modal = bootstrap.Modal.getInstance(modalElement);
+                    if (modal) modal.hide();
+                }
+
+                // إعادة الشكل الأصلي للمودال
+                form.reset();
+                form.classList.remove('d-none');
+                successAlert.classList.add('d-none');
+                window.toggleGuestCount(true);
+                rsvpSubmitBtn.disabled = false;
+                rsvpSubmitBtn.innerText = 'إرسال التأكيد';
+            }, 3000);
+
+        } catch (error) {
+            console.error("خطأ أثناء حفظ التأكيد: ", error);
+            alert('حدث خطأ أثناء إرسال البيانات. يرجى المحاولة مرة أخرى.');
+            rsvpSubmitBtn.disabled = false;
+            rsvpSubmitBtn.innerText = 'إرسال التأكيد';
+        }
+    };
+
+    function escapeHtml(text) {
+        if (!text) return '';
+        return text.replace(/[&<>"']/g, (m) => ({
+            '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;'
+        })[m]);
+    }
+</script>
+
+</html>
