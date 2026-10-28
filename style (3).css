@@ -656,7 +656,7 @@ iframe {
 }
 
 .couple-names img {
-  width: max(6.5cqw, 22px);
+  width: max(31.5cqw, 22px);
   height: auto;
 }
 
@@ -1564,7 +1564,7 @@ body.opened .cover-mono mask path {
   opacity: 0;
 }
 
-.cover-title .t1 { color: var(--brown-dark); font-size: 0.82em; }
+.cover-title .t1 { color: var(--brown); font-size: 0.82em; }
 .cover-title .t2 { color: var(--brown-dark); }
 
 .cover-product {
@@ -1645,7 +1645,7 @@ body.drawn .cover-hearts svg { animation: none !important; opacity: 1; transform
 .cover-title .t2 { font-size: 1.28em; }
 
 /* بطاقة الدعوة: "ميره" كبيرة، و"ام ميره" أصغر منها */
-.couple-main { font-size: max(23cqw, 48px); line-height: 1.15; }
+.couple-main { font-size: max(15cqw, 48px); line-height: 1.15; }
 .couple-sub  { font-size: max(6.2cqw, 21px); color: var(--brown); }
 
 /* قلب بين خطين ذهبيين فوق الأبيات */
@@ -1664,3 +1664,100 @@ body.drawn .cover-hearts svg { animation: none !important; opacity: 1; transform
 }
 .poem-heart i:last-child { background: linear-gradient(270deg, transparent, var(--gold)); }
 .poem-heart svg { width: 5.2cqw; min-width: 17px; height: auto; flex: none; }
+
+/* =====================================================================
+   غلاف مكسار ميره بالكود: خط وقلب وتاريخ، الاسم، زخرفة، وصورة المحل تحت
+   ===================================================================== */
+.slide-1 {
+  display: flex;
+  flex-direction: column;
+  --s: clamp(34px, min(14.5vw, calc(var(--ch, var(--app-h)) * 0.064)), 70px);   /* حجم الاسم، بيصغر على الشاشات القصيرة */
+}
+
+.slide-1 .cover-flora { z-index: 0; }
+.cover-flora.r.top {
+  -webkit-mask-image:
+    linear-gradient(90deg, rgba(0,0,0,.85) 35%, transparent 100%),
+    linear-gradient(180deg, #000 0%, #000 28%, transparent 52%);
+  mask-image:
+    linear-gradient(90deg, rgba(0,0,0,.85) 35%, transparent 100%),
+    linear-gradient(180deg, #000 0%, #000 28%, transparent 52%);
+}
+
+.cv {
+  position: relative;
+  z-index: 2;            /* الكلام دايماً فوق الصورة */
+  flex: 1 0 auto;        /* ما بينضغط: الصورة هي اللي بتصغر مش الكلام */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-top: 3%;
+}
+
+.cv-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  color: var(--brown-dark);
+}
+.cv-line { display: block; width: 1.5px; height: clamp(12px, calc(var(--ch, var(--app-h)) * 0.03), 24px); background: var(--brown-dark); }
+.cv-heart { width: 13px; height: 12px; }
+.cv-day, .cv-date { margin: 0; font-size: 15px; line-height: 1.2; color: var(--brown); letter-spacing: 0.04em; }
+.cv-date { display: flex; gap: 8px; direction: rtl; }
+.cv-date b { font-weight: 400; }
+
+.cv-name {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--font-title);
+  font-weight: 700;
+  color: var(--brown-dark);
+  font-size: var(--s);
+  line-height: 0.95;
+}
+.cv-name .t1 { font-size: 0.8em; }
+.cv-name .t2 { font-size: 1.4em; margin-top: -0.08em; }
+
+.cv-swash { display: block; width: min(60%, 240px); height: auto; }
+
+.cv-store {
+  position: relative;
+  z-index: 1;
+  display: block;
+  flex: 0 1 auto;        /* لو ما كفى المكان بتصغر وبتنقص من فوق (المتلاشي) */
+  min-height: 0;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: 50% 100%;
+  -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 26%);
+  mask-image: linear-gradient(180deg, transparent 0%, #000 26%);
+}
+
+/* ظهور هادي بعد فتح الستارة */
+.cv-fade, .cv-swash { opacity: 0; }
+@keyframes cvIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+body.opened .cv-top   { animation: cvIn 1.4s ease 0.9s both; }
+body.opened .cv-name  { animation: cvIn 1.6s ease 1.5s both; }
+body.opened .cv-swash { animation: cvIn 1.4s ease 2.2s both; }
+body.opened .cv-store { animation: cvIn 1.8s ease 1.2s both; }
+body.drawn .cv-fade, body.drawn .cv-swash { animation: none !important; opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .cv-fade, .cv-swash { opacity: 1; animation: none !important; } }
+
+/* "ميره" بالخط المكتوب (صورة) */
+.cv-name img.t2 {
+  display: block;
+  height: calc(var(--s) * 1.75);
+  width: auto;
+  margin-top: calc(var(--s) * 0.12);
+}
+
+/* طول الغلاف بالـ CSS لحاله: مش أقصر من ضعف العرض تقريباً */
+.slide-1 {
+  --ch: max(var(--app-h), min(calc(min(100vw, 600px) * 2.05), 900px));
+  min-height: max(560px, var(--ch));
+}
